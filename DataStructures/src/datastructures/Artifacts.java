@@ -63,11 +63,11 @@ public class Artifacts extends Stats {
 
     public Artifacts(String name, String setName, String piece, String artifact2SetBonus, String artifact4SetBonus) {
         super();
-        this.name = "";
-        this.setName = "";
-        this.piece = "";
-        this.artifact2SetBonus = "";
-        this.artifact4SetBonus = "";
+        this.name = name;
+        this.setName = setName;
+        this.piece = piece;
+        this.artifact2SetBonus = artifact2SetBonus;
+        this.artifact4SetBonus = artifact4SetBonus;
     }
     
     /**
@@ -84,11 +84,11 @@ public class Artifacts extends Stats {
 
     public Artifacts(String name, String setName, String piece, String artifact2SetBonus, String artifact4SetBonus, int level, ArrayList<Attributes> attribute) {
         super(level, attribute);
-        this.name = "";
-        this.setName = "";
-        this.piece = "";
-        this.artifact2SetBonus = "";
-        this.artifact4SetBonus = "";
+        this.name = name;
+        this.setName = setName;
+        this.piece = piece;
+        this.artifact2SetBonus = artifact2SetBonus;
+        this.artifact4SetBonus = artifact4SetBonus;
     }
     
     /**

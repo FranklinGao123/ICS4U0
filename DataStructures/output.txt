@@ -1,5 +1,40 @@
 Name: Diluc
 Damage Type: Pyro
 Weapon: Wolf's Gravestone - Claymore
-Main Stat: N/A
-Artifacts: N/A
+Main Stat:
+ATK: 563.0
+Substat:
+ATK: 45.3%
+=========================
+Artifact:
+Name: Witch's Flower of Blaze
+Set Name: Crimson Witch of Flames
+Piece: Flower of Life
+2 Set Bonus: Pyro DMG Bonus +15%
+4 Set Bonus: Increases Overloaded and Burning DMG by 40%. Increases Vaporize and Melt DMG by 15%. Using an Elemental Skill increases 2-Piece Set effects by 50% for 10s. Max 3 stacks.
+Main Stat:
+HP: 4780.0
+Substat:
+ATK: 19.0
+CRITRATE: 3.9%
+CRITDMG: 7.9%
+ATK: 5.8%
+Artifact:
+Name: Witch's Ever-Burning Plume
+Set Name: Crimson Witch of Flames
+Piece: Plume of Death
+2 Set Bonus: Pyro DMG Bonus +15%
+4 Set Bonus: Increases Overloaded and Burning DMG by 40%. Increases Vaporize and Melt DMG by 15%. Using an Elemental Skill increases 2-Piece Set effects by 50% for 10s. Max 3 stacks.
+Main Stat:
+ATK: 311.0
+Substat:
+ATK: 19.0
+CRITRATE: 3.9%
+CRITDMG: 7.9%
+ATK: 5.8%
+=========================
+Diluc Stats:
+HP: 12068.0
+ATK: 312.0
+DEF: 729.0
+CritRate: 19.2%

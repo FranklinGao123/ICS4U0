@@ -1,14 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package datastructures;
 
 /**
+ * A Object for inputing different types of input data types
  *
- * @author 665937
+ * @author Franklin Gao
+ * @version 1.0 (current version number of program)
+ * @since 1.8 (the version of the package this class was first added to)
  */
+
 public class Attributes {
     private String name;
     private double number;

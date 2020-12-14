@@ -1,48 +1,33 @@
-/**
- * A Object for taking in different types of input data types
- *
- * @author Franklin Gao
- *
- */
 package datastructures;
 
 import java.util.*;
 import java.io.*;
 
-public class FastReader {
+/**
+ * A Object for inputing different types of input data types
+ *
+ * @author Franklin Gao
+ * @version 1.0 (current version number of program)
+ * @since 1.8 (the version of the package this class was first added to)
+ */
 
-    /*
-    This is my input reader
-    
-    Atributes
-    ------------
-    br : BufferedReader
-        It is a buffering character-input stream
-    st : StringTokenizer
-        It is a string tokenizer
-    fileMissing:
-        Checks if the file is missing
-    Methods
-    ------------
-    next() -> String
-        Reads the next Input Line and returns the next token as a String
-    nextInt() -> Integer
-        Runs next() in order to receive the next token and the next token as a Integer
-    nextLong() -> Long
-        Runs next() in order to receive the next token and returns the next token as a Long
-    nextDouble() -> Double
-        Runs next() in order to receive the next token and returns the next token as a Double
-    nextFloat() -> Float
-        Runs next() in order to receive the next token and returns the next token as a Float
-    nextLine() -> String
-        Reads the next Input Line and returns the whole line as a String
+public class FastReader {
+    /**
+     * buffering character-input stream
      */
     BufferedReader br;
+    /**
+     * a string tokenizer
+     */
     StringTokenizer st;
+    /**
+     * Checks if the file is missing
+     */
     boolean fileMissing;
 
     /**
      * This is the constructor function for new input, initializes br
+     * Sends error message is file is missing
      */
     public FastReader() throws FileNotFoundException {
         fileMissing = false;

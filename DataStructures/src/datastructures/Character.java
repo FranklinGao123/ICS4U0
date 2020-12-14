@@ -174,6 +174,19 @@ public class Character extends Stats {
     }
     
     /**
+     *
+     * This adds the values for charcter stats (no main stat)
+     *
+     * @param attribute the stat of the object
+     * @param attributeNumber the numerical value of the stat
+     * @param scaling whether the stat is scaling amount
+     */
+    @Override
+    public void addSubStats(String attribute, double attributeNumber, boolean scaling) {
+        super.getAttributes().add(new Attributes(attribute, attributeNumber, scaling));
+    }
+    
+    /**
      * Prints the character's stats
      */
     @Override
@@ -182,6 +195,7 @@ public class Character extends Stats {
             Main.out.write("Name: " + name+ "\n");
             Main.out.write("Damage Type: " + dmgType+"\n");
             weapon.printWeapon();
+            Main.out.write("=========================\n");
             if (artifacts.size() != 0) {
                 for (int index = 0; index < artifacts.size(); index++) {
                     artifacts.get(index).printArtifact();
@@ -189,6 +203,8 @@ public class Character extends Stats {
             } else {
                 Main.out.write("Artifacts: N/A\n");
             }
+            Main.out.write("=========================\n");
+            Main.out.write(name+" Stats:\n");
             for (int index = 0; index < super.getAttributes().size(); index++) {
                 if (super.getAttributes().get(index).getScaling()) {
                     Main.out.write(super.getAttributes().get(index).getName() + ": " + super.getAttributes().get(index).getNumber() + "%\n");

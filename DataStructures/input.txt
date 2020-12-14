@@ -2,14 +2,36 @@ Diluc
 Pyro
 Wolf's Gravestone
 Claymore
+80
+ATK 563 false
+ATK 45.3 true
+2
 Witch's Flower of Blaze
 Crimson Witch of Flames
 Flower of Life
 Pyro DMG Bonus +15%
 Increases Overloaded and Burning DMG by 40%. Increases Vaporize and Melt DMG by 15%. Using an Elemental Skill increases 2-Piece Set effects by 50% for 10s. Max 3 stacks.
 16
-HP 4,780 false
+5
+HP 4780 false
 ATK 19 false
 CRITRATE 3.9 true
 CRITDMG 7.9 true
 ATK 5.8 true
+Witch's Ever-Burning Plume
+Crimson Witch of Flames
+Plume of Death
+Pyro DMG Bonus +15%
+Increases Overloaded and Burning DMG by 40%. Increases Vaporize and Melt DMG by 15%. Using an Elemental Skill increases 2-Piece Set effects by 50% for 10s. Max 3 stacks.
+16
+5
+ATK 311 false
+ATK 19 false
+CRITRATE 3.9 true
+CRITDMG 7.9 true
+ATK 5.8 true
+4
+HP 12068 false
+ATK 312 false
+DEF 729 false
+CritRate 19.2 true
