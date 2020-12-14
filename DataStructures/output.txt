@@ -1,0 +1,5 @@
+Name: Diluc
+Damage Type: Pyro
+Weapon: Wolf's Gravestone - Claymore
+Main Stat: N/A
+Artifacts: N/A

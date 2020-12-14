@@ -6,7 +6,8 @@
 package datastructures;
 import datastructures.FastReader;
 import datastructures.Stats;
-import datastructures.Pair;
+import datastructures.Attributes;
+import datastructures.Artifacts;
 import java.util.*;
 import java.io.*;
 
@@ -15,25 +16,20 @@ import java.io.*;
  * @author frank
  */
 public class Main {
+    public static FileWriter out;
     
     public static void main(String[] args) throws IOException {
-        FastReader s = new FastReader();
-        Stats character = new Stats();
-        character.setLevel(50);
-        character.setSubStats("Crit Rate", 0.01);
-        character.printStats();
-        System.out.println("=============================");
-        character.setMainAttribute("Attack Damage", 200);
-        character.setSubStats("Crit Dmg", 0.1);
-        character.setSubStats("Crit Rate", 0.15);
-        character.printStats();
-        System.out.println("=============================");
-        character.deleteSubStat("Crit Dmg", 0.1);
-        character.printStats();
-        System.out.println("=============================");
-        character.deleteSubStat("Crit Dmg", 0.1);
-        character.deleteMainStat();
-        character.printStats();
+        FastReader scanner = new FastReader();
+        out = new FileWriter("output.txt");
+        String characterName = scanner.nextLine();
+        String dmgType = scanner.nextLine();
+        String weaponName = scanner.nextLine();
+        String weaponType = scanner.nextLine();
+        Character character1 = new Character(characterName, dmgType, new Weapon(weaponName, weaponType), new ArrayList<Artifacts>());
+        for(int index = 0; index < 4; index++){
+            
+        }
+        out.close();
         
         
         

@@ -9,18 +9,21 @@ package datastructures;
  *
  * @author 665937
  */
-public class Pair {
+public class Attributes {
     private String name;
     private double number;
+    private boolean scaling;
     
-    public Pair(){
+    public Attributes(){
         name = "";
         number = 0;
+        scaling = false;
     }
     
-    public Pair(String name, double number){
+    public Attributes(String name, double number, boolean scaling){
         this.name = name;
         this.number = number;
+        this.scaling = scaling;
     }
     
     public String getName(){
@@ -29,5 +32,9 @@ public class Pair {
     
     public double getNumber(){
         return number;
+    }
+    
+    public boolean getScaling(){
+        return scaling;
     }
 }
