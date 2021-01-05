@@ -1,17 +1,19 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package datastructures;
 
 import java.util.*;
 import java.io.*;
 
 /**
- * A Object for inputing different types of input data types
  *
- * @author Franklin Gao
- * @version 1.0 (current version number of program)
- * @since 1.8 (the version of the package this class was first added to)
+ * @author frank
  */
+public class FastReaderConsole {
 
-public class FastReader {
     /**
      * buffering character-input stream
      */
@@ -20,26 +22,14 @@ public class FastReader {
      * a string tokenizer
      */
     StringTokenizer st;
-    /**
-     * Checks if the file is missing
-     */
-    boolean fileMissing;
-
+    
     /**
      * This is the constructor function for new input, initializes br
-     * Sends error message is file is missing
      */
-    public FastReader() throws FileNotFoundException {
-        fileMissing = false;
-        try {
-            File myFile = new File("input.txt");
-            br = new BufferedReader(new InputStreamReader(new FileInputStream(myFile)));
-        } catch (FileNotFoundException f) {
-            System.out.println("File not found");
-            fileMissing = true;
-        }
+    public FastReaderConsole() {
+        br = new BufferedReader(new InputStreamReader(System.in));
     }
-
+    
     /**
      * Reads the next Input Line
      *
@@ -48,20 +38,16 @@ public class FastReader {
      * @returns the next token as a String
      */
     String next() {
-        if (!fileMissing) {
-            while (st == null || !st.hasMoreElements()) {
-                try {
-                    st = new StringTokenizer(br.readLine());
-                } catch (IOException e) {
-                    System.out.println("Failed to read from file");
-                }
+        while (st == null || !st.hasMoreElements()) {
+            try {
+                st = new StringTokenizer(br.readLine());
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            return st.nextToken();
-        }else{
-            return null;
         }
+        return st.nextToken();
     }
-
+    
     /**
      * Runs next() in order to receive the next token
      *
@@ -70,7 +56,7 @@ public class FastReader {
     int nextInt() {
         return Integer.parseInt(next());
     }
-
+    
     /**
      * Runs next() in order to receive the next token
      *
@@ -79,7 +65,7 @@ public class FastReader {
     long nextLong() {
         return Long.parseLong(next());
     }
-
+    
     /**
      * Runs next() in order to receive the next token
      *
@@ -88,7 +74,7 @@ public class FastReader {
     double nextDouble() {
         return Double.parseDouble(next());
     }
-
+    
     /**
      * Runs next() in order to receive the next token
      *
@@ -97,7 +83,7 @@ public class FastReader {
     float nextFloat() {
         return Float.parseFloat(next());
     }
-
+    
     /**
      * Reads the next Input Line
      *

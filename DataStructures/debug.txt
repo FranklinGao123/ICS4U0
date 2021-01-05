@@ -1,0 +1,6 @@
+Successfully created input and output
+Successfully inputted the character name and damage type
+Successfully inputted the character's weapon
+Successfully inputed character's artifacts
+Successfully inputed character's stats
+Successfully changed/add artifactSuccessfully Printed to Output File

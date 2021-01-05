@@ -11,7 +11,7 @@ import datastructures.Attributes;
  * @version     1.0                 (current version number of program)
  * @since       1.8          (the version of the package this class was first added to)
  */
-public class Artifacts extends Stats {
+public class Artifacts extends Stats implements Comparable<Artifacts>{
     /**
      * name of the artifact
      */
@@ -220,5 +220,9 @@ public class Artifacts extends Stats {
         }
     }
     
+    @Override
+    public int compareTo(Artifacts other){
+        return this.getLevel()-other.getLevel();
+    }
 
 }

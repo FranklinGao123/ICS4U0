@@ -155,6 +155,8 @@ public class Character extends Stats {
     public void addArtifacts(Artifacts artifact) {
         if (this.artifacts.size() < 5) {
             this.artifacts.add(artifact);
+        }else{
+            System.out.println("Max Limit of Artifacts Reached");
         }
     }
 
@@ -170,7 +172,8 @@ public class Character extends Stats {
     
     /**
      *
-     * This adds the values for charcter stats (no main stat)
+     * This adds the values for charcter stats
+     * Characters do not have main or sub stats so this function will delete a stat
      *
      * @param attribute the stat of the object
      * @param attributeNumber the numerical value of the stat
@@ -179,6 +182,27 @@ public class Character extends Stats {
     @Override
     public void addSubStats(String attribute, double attributeNumber, boolean scaling) {
         super.getAttributes().add(new Attributes(attribute, attributeNumber, scaling));
+    }
+    
+    /**
+     *
+     * Deletes the stat that is the same as the parameters
+     * Characters do not have main or sub stats so this function will delete a stat
+     *
+     * @param attribute the stat of the object that will be deleted
+     * @param attributeNumber the numerical value of the stat that will be
+     * deleted
+     * @param scaling whether the stat is scaling amount that will be deleted
+     */
+    @Override
+    public void deleteSubStat(String attribute, double attributeNumber, boolean scaling) {
+        for (int index = 0; index < this.getAttributes().size(); index++) {
+            if (this.getAttributes().get(index).getName().equals(attribute) && this.getAttributes().get(index).getNumber() == attributeNumber && this.getAttributes().get(index).getScaling() == scaling) {
+                this.getAttributes().remove(index);
+                return;
+            }
+        }
+        System.out.println("Delete Failed, Please reinput attributes");
     }
     
     /**
@@ -194,6 +218,8 @@ public class Character extends Stats {
             if (artifacts.size() != 0) {
                 for (int index = 0; index < artifacts.size(); index++) {
                     artifacts.get(index).printArtifact();
+                    if(index!=artifacts.size()-1)
+                        Main.out.write("\n");
                 }
             } else {
                 Main.out.write("Artifacts: N/A\n");

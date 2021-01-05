@@ -125,7 +125,7 @@ public abstract class Stats {
      */
     public void deleteSubStat(String attribute, double attributeNumber, boolean scaling) {
         for (int index = 1; index < this.attribute.size(); index++) {
-            if (this.attribute.get(index).getName() == attribute && this.attribute.get(index).getNumber() == attributeNumber && this.attribute.get(index).getScaling() == scaling) {
+            if (this.attribute.get(index).getName().equals(attribute) && this.attribute.get(index).getNumber() == attributeNumber && this.attribute.get(index).getScaling() == scaling) {
                 this.attribute.remove(index);
                 return;
             }
