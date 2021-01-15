@@ -10,8 +10,8 @@ import java.io.*;
  * @version 1.0 (current version number of program)
  * @since 1.8 (the version of the package this class was first added to)
  */
-
 public class FastReaderFile {
+
     /**
      * buffering character-input stream
      */
@@ -26,8 +26,8 @@ public class FastReaderFile {
     boolean fileMissing;
 
     /**
-     * This is the constructor function for new input, initializes br
-     * Sends error message is file is missing
+     * This is the constructor function for new input, initializes br Sends
+     * error message is file is missing
      */
     public FastReaderFile() throws FileNotFoundException {
         fileMissing = false;
@@ -57,7 +57,7 @@ public class FastReaderFile {
                 }
             }
             return st.nextToken();
-        }else{
+        } else {
             return null;
         }
     }

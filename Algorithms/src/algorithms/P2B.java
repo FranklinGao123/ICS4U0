@@ -7,59 +7,12 @@ package algorithms;
 
 import java.util.*;
 import java.io.*;
-
+import algorithms.FastReaderConsole;
 /**
  *
  * @author frank
  */
 public class P2B {
-
-    public static class FastReader {
-
-        BufferedReader br;
-        StringTokenizer st;
-
-        public FastReader() {
-            br = new BufferedReader(new InputStreamReader(System.in));
-        }
-
-        String next() {
-            while (st == null || !st.hasMoreElements()) {
-                try {
-                    st = new StringTokenizer(br.readLine());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            return st.nextToken();
-        }
-
-        int nextInt() {
-            return Integer.parseInt(next());
-        }
-
-        long nextLong() {
-            return Long.parseLong(next());
-        }
-
-        double nextDouble() {
-            return Double.parseDouble(next());
-        }
-
-        float nextFloat() {
-            return Float.parseFloat(next());
-        }
-
-        String nextLine() {
-            String str = null;
-            try {
-                str = br.readLine();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return str;
-        }
-    }
 
     static boolean check(char a, char b) {
         if (a == b && (a == 'i' || a == 'l' || a == 'm' || a == 'n' || a == 'o' || a == 't' || a == 'u' || a == 'v' || a == 'w' || a == 'x')) {
@@ -116,26 +69,26 @@ public class P2B {
         }
         return sum;
     }
-    
-    static boolean recursiveCheck(String word){
-        if(word.length()==1){
-            if(check(word.charAt(0))){
+
+    static boolean recursiveCheck(String word) {
+        if (word.length() == 1) {
+            if (check(word.charAt(0))) {
                 return true;
             }
             return false;
-        }else if(word.length()==2){
-            if(check(word.charAt(0),word.charAt(1))){
+        } else if (word.length() == 2) {
+            if (check(word.charAt(0), word.charAt(1))) {
                 return true;
             }
             return false;
-        }else{
-            return (check(word.charAt(0),word.charAt(word.length()-1)) & recursiveCheck(word.substring(1,word.length()-1)));
+        } else {
+            return (check(word.charAt(0), word.charAt(word.length() - 1)) & recursiveCheck(word.substring(1, word.length() - 1)));
         }
     }
-    
+
     static int recursive(String word, int pointerA, int pointerB) {
         boolean work = false;
-        if (recursiveCheck(word.substring(pointerA, pointerB+1))) {
+        if (recursiveCheck(word.substring(pointerA, pointerB + 1))) {
             work = true;
         }
         pointerB--;
@@ -155,11 +108,10 @@ public class P2B {
         }
     }
 
-
     public static void main(String[] args) throws IOException {
-        FastReader s = new FastReader();
+        FastReaderConsole s = new FastReaderConsole();
         String word = s.next().toLowerCase();
         System.out.println(iterative(word));
-        System.out.println(recursive(word,0,word.length()-1));
+        System.out.println(recursive(word, 0, word.length() - 1));
     }
 }

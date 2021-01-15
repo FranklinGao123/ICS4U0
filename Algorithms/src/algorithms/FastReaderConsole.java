@@ -22,14 +22,14 @@ public class FastReaderConsole {
      * a string tokenizer
      */
     StringTokenizer st;
-    
+
     /**
      * This is the constructor function for new input, initializes br
      */
     public FastReaderConsole() {
         br = new BufferedReader(new InputStreamReader(System.in));
     }
-    
+
     /**
      * Reads the next Input Line
      *
@@ -47,7 +47,7 @@ public class FastReaderConsole {
         }
         return st.nextToken();
     }
-    
+
     /**
      * Runs next() in order to receive the next token
      *
@@ -56,7 +56,7 @@ public class FastReaderConsole {
     int nextInt() {
         return Integer.parseInt(next());
     }
-    
+
     /**
      * Runs next() in order to receive the next token
      *
@@ -65,7 +65,7 @@ public class FastReaderConsole {
     long nextLong() {
         return Long.parseLong(next());
     }
-    
+
     /**
      * Runs next() in order to receive the next token
      *
@@ -74,7 +74,7 @@ public class FastReaderConsole {
     double nextDouble() {
         return Double.parseDouble(next());
     }
-    
+
     /**
      * Runs next() in order to receive the next token
      *
@@ -83,7 +83,7 @@ public class FastReaderConsole {
     float nextFloat() {
         return Float.parseFloat(next());
     }
-    
+
     /**
      * Reads the next Input Line
      *

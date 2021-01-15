@@ -59,7 +59,7 @@ public class Main {
                     break;
                 }
             }
-            if(index==-1){
+            if (index == -1) {
                 array[0] = temp;
             }
         }
@@ -77,40 +77,47 @@ public class Main {
         for (int index = 0; index < size; index++) {
             array[index] = new ChessRank(index, scanner.nextInt());
         }
-        
+
         //Code for timing bubbble vs insertion sort
         out.write("Sorting \n");
         long milliseconds = clock.millis();
+
+        /*Bubble Sort Time
         ChessRank[] bubbleSorted = bubbleSort(array);
         long bubbleTime = clock.millis()-milliseconds;
         for(int index = 0; index<size; index++){
             bubble.write(bubbleSorted[index].getRank()+"\n");
         }
         out.write("Bubble Sort: "+bubbleTime+" milliseconds\n");
-        milliseconds = clock.millis();
+         */
+
+ /*Insertion Sort
         ChessRank[] insertionSorted = insertionSort(array);
         long insertionSort = clock.millis()-milliseconds;
         for(int index = 0; index<size; index++){
             insertion.write(insertionSorted[index].getRank()+"\n");
         }
         out.write("Insertion Sort: "+insertionSort+" milliseconds\n");
+         */
+        //out.write("Insertion Sort is "+((double)bubbleTime/insertionSort)+" times faster\n");
+        //Code for timing the Binary Search vs Linear 
+        // Code for linear
+        /*
+        milliseconds = clock.millis();
+        out.write("Index Number "+linearSearch(array, 1311407666)+"\n");
+        long linearTime = clock.millis()-milliseconds;
+        out.write("Linear Search: "+linearTime+" milliseconds\n");
+
+        //Binary Search time
         milliseconds = clock.millis();
         Arrays.sort(array);
         long quickSort = clock.millis()-milliseconds;
-        out.write("Quick Sort: " + quickSort+ " milliseconds\n");
-        out.write("Insertion Sort is "+((double)bubbleTime/insertionSort)+" times faster\n");
-        
-        //Code for timing the Binary Search vs Linear 
-        milliseconds = clock.millis();
-        out.write("Index Number "+linearSearch(array, 1577968505)+"\n");
-        long linearTime = clock.millis()-milliseconds;
-        out.write("Linear Search: "+linearTime+" milliseconds\n");
-        milliseconds = clock.millis();
-        Arrays.sort(array);
+        //out.write("Quick Sort: " + quickSort+ " milliseconds\n");
         out.write("Index Number "+binarySearch(array, 1577968505)+"\n");
         long binaryTime = clock.millis()-milliseconds;
         out.write("Binary Search: "+binaryTime+" milliseconds\n");
-        out.write("Binary Search is "+((double)linearTime/binaryTime)+" times faster\n");
+         */
+        //out.write("Binary Search is "+((double)linearTime/binaryTime)+" times faster\n");
         out.close();
         bubble.close();
         insertion.close();

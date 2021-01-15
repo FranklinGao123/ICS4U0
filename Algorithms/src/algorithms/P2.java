@@ -7,59 +7,13 @@ package algorithms;
 
 import java.util.*;
 import java.io.*;
+import algorithms.FastReaderConsole;
 
 /**
  *
  * @author frank
  */
 public class P2 {
-
-    public static class FastReader {
-
-        BufferedReader br;
-        StringTokenizer st;
-
-        public FastReader() {
-            br = new BufferedReader(new InputStreamReader(System.in));
-        }
-
-        String next() {
-            while (st == null || !st.hasMoreElements()) {
-                try {
-                    st = new StringTokenizer(br.readLine());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            return st.nextToken();
-        }
-
-        int nextInt() {
-            return Integer.parseInt(next());
-        }
-
-        long nextLong() {
-            return Long.parseLong(next());
-        }
-
-        double nextDouble() {
-            return Double.parseDouble(next());
-        }
-
-        float nextFloat() {
-            return Float.parseFloat(next());
-        }
-
-        String nextLine() {
-            String str = null;
-            try {
-                str = br.readLine();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return str;
-        }
-    }
 
     static int iterative(String word) {
         int pointerA = 0;
@@ -122,7 +76,7 @@ public class P2 {
     }
 
     public static void main(String[] args) throws IOException {
-        FastReader scanner = new FastReader();
+        FastReaderConsole scanner = new FastReaderConsole();
         String word = scanner.next().toLowerCase();
         System.out.println(iterative(word));
         System.out.println(recursive(word, 0, word.length() - 1));
