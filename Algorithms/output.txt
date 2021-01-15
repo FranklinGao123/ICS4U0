@@ -1,0 +1,10 @@
+Sorting 
+Bubble Sort: 433084 milliseconds
+Insertion Sort: 13 milliseconds
+Quick Sort: 4 milliseconds
+Insertion Sort is 33314.153846153844 times faster
+Index Number 146823
+Linear Search: 3 milliseconds
+Index Number 146823
+Binary Search: 0 milliseconds
+Binary Search is Infinity times faster
