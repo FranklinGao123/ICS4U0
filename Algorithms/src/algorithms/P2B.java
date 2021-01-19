@@ -38,7 +38,7 @@ public class P2B {
         int pointerA = 0;
         int pointerB = 0;
         int sum = 0;
-        while (pointerA < word.length() - 1) {
+        while (pointerA < word.length()) {
             boolean work = true;
             String temp = word.substring(pointerA, pointerB + 1);
             if (temp.length() > 1) {
