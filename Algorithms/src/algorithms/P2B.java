@@ -96,10 +96,18 @@ public class P2B {
             pointerA++;
             pointerB = word.length() - 1;
             if (pointerA == word.length()) {
+                if (work) {
+                return 1;
+            } else {
                 return 0;
             }
+            }
         } else if (pointerB == -1) {
-            return 0;
+            if (work) {
+                return 1;
+            } else {
+                return 0;
+            }
         }
         if (work) {
             return 1 + recursive(word, pointerA, pointerB);
